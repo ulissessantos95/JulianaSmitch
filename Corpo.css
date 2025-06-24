@@ -1,0 +1,35 @@
+/* styles.css */
+
+h1{
+    text-align: center;
+    background-color: rgb(216, 159, 75);
+    padding: 17px;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #0c0c0c;
+}
+
+
+form {
+  text-align: center;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  border: 1px solid #d6ce80;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+
