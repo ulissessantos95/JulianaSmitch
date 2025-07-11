@@ -13,16 +13,16 @@ html {
 
   --primaria: #193eb8;
   --secundaria: #7c3aed;
-  --escuro: #f0eede;
+  --claro: #f0eede;
   --maisescuro: #0a0f1c;
-  --claro: #040c18;
-  --vidro: rgba(255, 255, 255, 0.05);
+  --escuro: #040c18;
+  --vidro: rgba(97, 97, 97, 0.815);
 
 }
 
 body {
-  background-color: var(--escuro);
-  color: var(--claro);
+  background-color: var(--claro);
+  color: var(--escuro);
 }
 
 .navegacao {
@@ -43,7 +43,7 @@ body {
 
 .menu-link{
   text-decoration: none;
-  color: var(--claro);
+  color: var(--escuro);
   font-weight: 500;
   position: relative;
   padding: 0.5rem 0;
@@ -91,7 +91,7 @@ h1{
 
 .cabecalho-sub-titulo{
   font-size: 1.5rem;
-  color: var(--claro);
+  color: var(--escuro);
 }
 
 .sobre{
@@ -100,7 +100,7 @@ h1{
 
 .sobre-titulo{
   font-size: 3rem;
-  color: var(--claro);
+  color: var(--escuro);
   text-align: center;
 
 }
@@ -110,7 +110,7 @@ h1{
   max-width: 950px;
   margin: 0 auto;
   border-radius: 28px;
-  border: 1px solid var(--claro);
+  border: 1px solid var(--escuro);
   backdrop-filter: blur(10px);
   background: rgba(165, 156, 71, 0.8);
 
@@ -119,5 +119,55 @@ h1{
 .sobre-paragrafo{
   text-align: center;
   font-size: 1.3rem;
+
+}
+
+.projetos{
+  padding: 6rem, 2rem;
+
+}
+
+.projetos-titulo{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+
+}
+
+.projetos-card:hover{
+   box-shadow: 0 10px 20px rgba(143, 117, 3, 0.849);
+   transform: translateY(-10px) scale(1.03);
+}
+
+
+.projetos-caixas{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.projetos-imagem{
+  height: 200px;
+  width: 100%;
+  object-fit: 1.2rem;
+}
+
+.projetos-card{
+  background: rgba(190, 163, 43, 0.849);
+  border-radius: 16px;
+  backdrop-filter: blur(26px);
+  border: 1px solid var(--escuro);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.paragrafo-projetos{
+
+}
+
+.info-projetos{
 
 }
