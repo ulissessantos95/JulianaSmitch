@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="particulas"></div>
+
+
     <!-- (nav) onde meu menu será responivel de onde eu clicar ele direcionar ao comando do click -->
     <nav class="navegacao">
 
@@ -20,7 +24,7 @@
             </li>
    
             <li>
-                <a href="#projeto" class="menu-link">Projetos</a>
+                <a href="#projetos" class="menu-link">Projetos</a>
             </li>
       
             <li>
@@ -42,6 +46,7 @@
 
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo" >Sobre Mim</h2>
+
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
                Na Clínica Multidisciplinar Especializada, me dedico à Assistência Terapêutica com foco no Transtorno do Espectro Autista, utilizando abordagens inovadoras da ciência ABA. Minha trajetória acadêmica no Centro Universitário UniFatecie, cursando Terapia Ocupacional, 
@@ -59,22 +64,60 @@
 
             <div class="projetos-card">
                 <img src="Img/Logo.png" alt="Projeto 1" class="projetos-imagem">
+
+                <div class="caixa-textos-projetos">
                 <h3 class="info-projetos">Terapia de Projetos</h3>
                 <P class="paragrafo-projetos">lkfanginerfgaerfngbaernbgrenrenbgner</P>
+                </div>
 
             </div>
 
             <div class="projetos-card">
-                <img src="Img/ju01.jpeg" alt="Projeto 2" class="projetos-imagem">
-                <h3 class="info-projetos">Contato</h3>
+                <img src="Img/ju02.jpeg" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Projeto 3</h3>
                 <P class="paragrafo-projetos">kkkkkkkkkkkkkkkkkkkkkkkk</P>
+                </div>
 
             </div>
 
             <div class="projetos-card">
                 <img src="Img/ju03.jpeg" alt="Projeto 3" class="projetos-imagem">
+                
+                <div class="caixa-textos-projetos">
                 <h3 class="info-projetos">Terapia de Projetos</h3>
                 <P class="paragrafo-projetos">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</P>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="Img/WhatsApp Image 2025-05-26 at 14.49.28.jpeg" alt="Projeto 3" class="projetos-imagem">
+                
+                <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Terapia de Projetos</h3>
+                <P class="paragrafo-projetos">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</P>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="Img/WhatsApp Image 2025-05-26 at 14.49.27 (4).jpeg" alt="Projeto 3" class="projetos-imagem">
+                
+                <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Terapia de Projetos</h3>
+                <P class="paragrafo-projetos">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</P>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="Img/WhatsApp Image 2025-05-26 at 14.49.26.jpeg" alt="Projeto 3" class="projetos-imagem">
+                
+                <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Terapia de Projetos</h3>
+                <P class="paragrafo-projetos">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</P>
+                </div>
 
             </div>
         </div>
@@ -82,15 +125,35 @@
     </section>
     
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form class="formulario-contato" id="formulario">
-            <div class="nome-form">
-                <input  placeholder="Nome" class="campo-form">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <div class="grupo-form">
+                <input  placeholder="Nome" class="campo-form" id="nome">
             </div>
             <div class="grupo-form">
-                <textarea class="texr-form"  placeholder="Digite sua mensagem"></textarea>
+                <textarea class="campo-form"  placeholder="Digite sua mensagem" rows="9" id="mensagem"></textarea>
             </div>
+
+            <button type="submit" class="botao-form">Enviar Whatsap</button>
         </form>
     </section>
+
+    <footer>
+        <a href="https://www.instagram.com/julianasterapeuta/" target="_blank" rel="noopener noreferrer">
+            <img src="Img/insta.jpg" alt="GitHub icon">
+            <p>Instagran</p>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <img src="Img/you.jpg" alt="YouTube icon">
+            <p>YouTube</p>
+        </a>
+        <a href="https://www.linkedin.com/in/ulisses-miranda95/" target="_blank" rel="noopener noreferrer">
+            <img src="Img/liken.jpg" alt="LinkedIn icon">
+            <p>LinkedIn</p>
+        </a>
+    </footer>
+
+    <script src="Script.js"></script>
 </body>
 </html>
