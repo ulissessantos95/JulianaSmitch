@@ -38,15 +38,16 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 3rem;
+  gap: 10rem;
 
 }
 
 .menu-link{
   text-decoration: none;
   font-size: larger;
+  font-style: italic;
   color: var(--escuro);
-  font-weight: 500;
+  font-weight: 700;
   position: relative;
   padding: 0.5rem 0;
 }
@@ -68,41 +69,127 @@ body {
 /* after --> depois / before --> antes */
 
 .cabecalho{
-  min-height: 70vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 
 }
 
 .foto-perfil{
   width:450px;
   height: 450px;
+  display: block;
+  margin: 0 auto;
   box-shadow: 0 0 20px rgba(190, 163, 43, 0.849);
   border-radius: 50%;
   border: 4px solid var(--vidro);
   animation: flutuar 5s ease-in-out infinite; 
+
 }
 
 h1{
-  font-size: 3.6 rem;
-  color:var(--claro);
+  text-align: center;
+  font-size: 5rem;
+  font-style: italic;
+  color:var(--escuro);
   font-weight:bold;
-  margin: 20px;
+  margin: 25px;
 }
+
+.carrosel-container {
+  position: relative; 
+  width: 65%; 
+  margin: 0 auto; /* Centraliza o carrossel na página */
+  overflow: hidden; /* **Essencial**: Esconde as imagens que estão fora da visualização */
+  padding: 2px 0; /* Espaçamento vertical para os botões não ficarem colados */
+  border: solid var(--escuro);
+  border-radius: 60px;
+}
+
+.projetos-corrosel {
+  display: flex; /* Coloca as imagens lado a lado */
+  overflow-x: scroll; 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Para Firefox */
+  -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+}
+
+.projetos-corrosel::-webkit-scrollbar {
+  display: none;
+}
+
+.projetos-card2 {
+  flex: 0 0 auto; /* Impede que os cards encolham ou cresçam */
+  margin-right: 25px; /* Espaçamento entre as imagens */
+  width: 400px; /* Largura de cada imagem no carrossel. Ajuste conforme seu design. */
+  height: 400px; /* Altura de cada imagem. Use object-fit para cobrir o espaço. */
+  border-radius: 60px; /* Bordas arredondadas */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(92, 91, 89, 0.849); /* Sombra para dar profundidade */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.project-titulo{
+  text-align: center;
+  font-size: 2.9rem;
+  font-style: italic;
+  margin-bottom: 30px;
+
+}
+
+.projetos-img-carrossel {
+  width: 60vh; /* Faz a imagem preencher a largura do card */
+  height: 100%; /* Faz a imagem preencher a altura do card */
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilos para os botões de navegação */
+.carrossel-button {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10; /* Garante que os botões fiquem acima das imagens */
+    border-radius: 50%; /* Botões redondos */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+    display: flex; /* Para centralizar o símbolo da seta */
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 .cabecalho-sub-titulo{
   font-size: 1.5rem;
   color: var(--escuro);
+  text-align: center; 
+  font-style: italic;
+  max-width: 1000px; 
+  width: 100%; /* Garante que ocupe 90% da largura do pai, mas sem ultrapassar max-width */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  line-height: 1.3; 
+  color: #333;
 }
 
 .sobre{
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
 }
 
 .sobre-titulo{
   font-size: 3rem;
+  font-style: italic;
   color: var(--escuro);
   text-align: center;
 
@@ -121,7 +208,8 @@ h1{
 
 .sobre-paragrafo{
   text-align: center;
-  font-size: 1.3rem;
+  font-style: italic;
+  font-size: 1.4rem;
 
 }
 
@@ -132,6 +220,7 @@ h1{
 
 .projetos-titulo{
   text-align: center;
+  font-style: italic;
   font-size: 2.5rem;
   margin-bottom: 50px;
 
@@ -172,15 +261,19 @@ h1{
 
 }
 .paragrafo-projetos{
+  font-style: italic;
   color: rgba(243, 242, 237, 0.849);
   line-height: 1.25rem;
 
 }
 
 .info-projetos{
-  margin-bottom: 5px;
+  font-style: italic;
+  margin-bottom: 15px;
 
 }
+
+
 
 .contatos{
   padding: 6rem 2rem;
@@ -190,6 +283,7 @@ h1{
 .contatos-titulo{
   text-align: center;
   font-size: 2.5rem;
+  font-style: italic;
   margin-bottom: 50px;
 }
 
@@ -208,10 +302,12 @@ h1{
 .campo-form{
   width: 100%;
   padding: 1rem;
+  font-style: italic;
   background: rgb(229, 230, 228);
   border-radius: 8px;
   color: var(--escuro);
   border: 1px solid var(--vidro) ;
+  resize: none;
   outline: none;
 
 }
@@ -226,6 +322,7 @@ h1{
 }
 
 .botao-form{
+  font-style: italic;
   color: var(--claro);
   background: linear-gradient(45deg, var(--primaria), var(--secundaria));
   padding: 1rem 2rem;
@@ -267,6 +364,44 @@ h1{
   }
 }
 
+.carrossel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carrossel-button.prev {
+    left: 10px; /* Posição do botão esquerdo */
+}
+
+.carrossel-button.next {
+    right: 10px; /* Posição do botão direito */
+}
+
+@media (max-width: 768px) {
+    .projetos-card2 {
+        width: 300px;
+        height: 200px;
+    }
+    .carrossel-button {
+        padding: 8px 12px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos-card2 {
+        width: 85vw; 
+        margin-right: 15px;
+        height: 180px;
+    }
+    .carrosel-container {
+        width: 100%;
+    }
+    .carrossel-button {
+        padding: 5px 10px;
+        font-size: 18px;
+    }
+}
+
 
 
 footer {
@@ -305,6 +440,8 @@ footer a img {
 }
 
 footer a p {
+  min-height: 12rem;
+  max-width: 8rem;
   font-size: 1.1em;
   margin: 8px; 
 }
