@@ -13,7 +13,8 @@ html {
 
   --primaria: #1c6e11;
   --secundaria: #5ee452;
-  --claro: #ebe9d8;
+  --claro: #f3f3ef;
+  --padrao: #DAA520;
   --maisescuro: #18181a;
   --escuro: #373f4b;
   --vidro: rgb(243, 243, 237);
@@ -69,7 +70,7 @@ body {
 /* after --> depois / before --> antes */
 
 .cabecalho{
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,12 +100,12 @@ h1{
 
 .carrosel-container {
   position: relative; 
-  width: 65%; 
+  width: 80%; 
   margin: 0 auto; /* Centraliza o carrossel na página */
   overflow: hidden; /* **Essencial**: Esconde as imagens que estão fora da visualização */
-  padding: 2px 0; /* Espaçamento vertical para os botões não ficarem colados */
-  border: solid var(--escuro);
-  border-radius: 60px;
+  padding: 1px 0; /* Espaçamento vertical para os botões não ficarem colados */
+  border: solid var(--padrao);
+  border-radius: 65px;
 }
 
 .projetos-corrosel {
@@ -184,10 +185,11 @@ h1{
 }
 
 .sobre{
-  padding: 8rem 2rem;
+  padding: 15rem 9rem;
 }
 
 .sobre-titulo{
+  padding: 30px;
   font-size: 3rem;
   font-style: italic;
   color: var(--escuro);
@@ -196,10 +198,10 @@ h1{
 }
 
 .sobre-caixa{
-  padding: 2rem;
+  padding: 6rem;
   max-width: 950px;
   margin: 0 auto;
-  border-radius: 28px;
+  border-radius: 85px;
   border: 1px solid var(--escuro);
   backdrop-filter: blur(10px);
   background: rgba(211, 193, 113, 0.849);
@@ -242,7 +244,7 @@ h1{
 }
 
 .projetos-imagem{
-  height: 200px;
+  height: 400px;
   width: 100%;
   object-fit: 1.2rem;
 }
@@ -251,7 +253,7 @@ h1{
   background: rgba(211, 193, 113, 0.849);
   border-radius: 16px;
   backdrop-filter: blur(26px);
-  border: 1px solid var(--escuro);
+  border: 2px solid var(--padrao);
   overflow: hidden;
   transition: all 0.5s ease;
 }
@@ -276,7 +278,7 @@ h1{
 
 
 .contatos{
-  padding: 6rem 2rem;
+  padding: 15rem 8rem;
 
 }
 
@@ -284,7 +286,7 @@ h1{
   text-align: center;
   font-size: 2.5rem;
   font-style: italic;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .formulario-contato{
@@ -406,14 +408,14 @@ h1{
 
 footer {
     color: #242222; 
-    padding: 30px px; 
+    padding: 1rem; 
     text-align: center;
     display: flex; 
     justify-content: center;
     align-items: center; 
     flex-wrap: wrap;
-    gap: 80px;
-    margin-top: 50px;
+    gap: 85px;
+    margin-top: 1.5px;
 }
 
 footer a {
@@ -431,19 +433,20 @@ footer a:hover {
 }
 
 footer a img {
-    width: 80px;
-    height: 70px;
-    margin-bottom: 8px; 
+    width: 70px;
+    height: 60px;
+    margin-bottom: 9px; 
     border-radius: 50%; 
     background-color:rgba(190, 163, 43, 0.849); 
     padding: 5px; 
 }
 
 footer a p {
-  min-height: 12rem;
-  max-width: 8rem;
-  font-size: 1.1em;
-  margin: 8px; 
+  min-height: 2rem;
+  max-width: 5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 6px; 
 }
 
 
