@@ -373,14 +373,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 85px;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  gap: 85px; /* Espaçamento entre os itens */
   margin-top: 1.5px;
 }
 
 footer a {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Cada link (com imagem e texto) já é uma coluna */
   align-items: center;
   text-decoration: none;
   color: #2b2a2a;
