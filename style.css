@@ -1,3 +1,4 @@
+/* Estilos Universais */
 * {
   margin: 0;
   padding: 0;
@@ -10,15 +11,15 @@ html {
 }
 
 :root {
-
-  --primaria: #1c6e11;
-  --secundaria: #5ee452;
-  --claro: #f3f3ef;
-  --padrao: #DAA520;
+  --primaria: #f8f7e8;
+  --secundaria: #ddb151;
+  --verdeclaro: #20da20;
+  --verdeescuro: #1f961f;
+  --claro: #f7f7f7;
+  --padrao: #daa520;
   --maisescuro: #18181a;
   --escuro: #373f4b;
   --vidro: rgb(243, 243, 237);
-
 }
 
 body {
@@ -26,7 +27,7 @@ body {
   color: var(--escuro);
 }
 
-
+/* Barra de Navegação */
 .navegacao {
   position: fixed;
   top: 0;
@@ -35,15 +36,15 @@ body {
   z-index: 100;
   padding: 1.5rem;
 }
+
 .menu {
   display: flex;
   justify-content: center;
   list-style: none;
   gap: 10rem;
-
 }
 
-.menu-link{
+.menu-link {
   text-decoration: none;
   font-size: larger;
   font-style: italic;
@@ -53,68 +54,81 @@ body {
   padding: 0.5rem 0;
 }
 
-.menu-link::after{
+.menu-link::after {
   content: '';
   height: 2px;
   width: 0;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient (90deg, var(--primaria), var(--secundaria));
+  background: linear-gradient(90deg, var(--primaria), var(--secundaria));
   transition: width 0.5s ease;
 }
 
-.menu-link:hover::after{
-  width:100%;
+.menu-link:hover::after {
+  width: 100%;
 }
-/* after --> depois / before --> antes */
 
-.cabecalho{
+/* Seção do Cabeçalho */
+.cabecalho {
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* Permite que o conteúdo se empilhe */
   justify-content: center;
   align-items: center;
-
+  padding: 2rem 1rem; /* Adiciona um pouco de preenchimento */
 }
 
-.foto-perfil{
-  width:450px;
+.foto-perfil {
+  width: 450px;
   height: 450px;
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(190, 163, 43, 0.849);
   border-radius: 50%;
   border: 4px solid var(--vidro);
-  animation: flutuar 5s ease-in-out infinite; 
-
+  animation: flutuar 5s ease-in-out infinite;
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: 5rem;
   font-style: italic;
-  color:var(--escuro);
-  font-weight:bold;
-  margin: 25px;
+  color: var(--escuro);
+  font-weight: bold;
+  margin: 25px 0; /* Ajusta a margem para responsividade */
 }
 
+.cabecalho-sub-titulo {
+  font-size: 1.5rem;
+  color: var(--escuro);
+  text-align: center;
+  font-style: italic;
+  max-width: 1000px;
+  width: 90%; /* Usa porcentagem para a largura */
+  margin: 0 auto;
+  line-height: 1.3;
+  color: #333;
+}
+
+/* Carrossel de Projetos */
 .carrosel-container {
-  position: relative; 
-  width: 80%; 
-  margin: 0 auto; /* Centraliza o carrossel na página */
-  overflow: hidden; /* **Essencial**: Esconde as imagens que estão fora da visualização */
-  padding: 1px 0; /* Espaçamento vertical para os botões não ficarem colados */
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1px 0;
   border: solid var(--padrao);
   border-radius: 65px;
 }
 
 .projetos-corrosel {
-  display: flex; /* Coloca as imagens lado a lado */
-  overflow-x: scroll; 
+  display: flex;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Para Firefox */
-  -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .projetos-corrosel::-webkit-scrollbar {
@@ -122,82 +136,77 @@ h1{
 }
 
 .projetos-card2 {
-  flex: 0 0 auto; /* Impede que os cards encolham ou cresçam */
-  margin-right: 25px; /* Espaçamento entre as imagens */
-  width: 400px; /* Largura de cada imagem no carrossel. Ajuste conforme seu design. */
-  height: 400px; /* Altura de cada imagem. Use object-fit para cobrir o espaço. */
-  border-radius: 60px; /* Bordas arredondadas */
+  flex: 0 0 auto;
+  margin-right: 25px;
+  width: 400px;
+  height: 400px;
+  border-radius: 60px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(92, 91, 89, 0.849); /* Sombra para dar profundidade */
-  display: flex; 
+  box-shadow: 0 4px 10px rgba(92, 91, 89, 0.849);
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.project-titulo{
+.project-titulo {
   text-align: center;
   font-size: 2.9rem;
   font-style: italic;
   margin-bottom: 30px;
-
 }
 
 .projetos-img-carrossel {
-  width: 60vh; /* Faz a imagem preencher a largura do card */
-  height: 100%; /* Faz a imagem preencher a altura do card */
+  width: 100%; /* Faz a imagem preencher a largura do card */
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Estilos para os botões de navegação */
+/* Botões de Navegação do Carrossel */
 .carrossel-button {
-    position: absolute;
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 10; /* Garante que os botões fiquem acima das imagens */
-    border-radius: 50%; /* Botões redondos */
-    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
-    display: flex; /* Para centralizar o símbolo da seta */
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
-.cabecalho-sub-titulo{
-  font-size: 1.5rem;
-  color: var(--escuro);
-  text-align: center; 
-  font-style: italic;
-  max-width: 1000px; 
-  width: 100%; /* Garante que ocupe 90% da largura do pai, mas sem ultrapassar max-width */
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.4rem;
-  line-height: 1.3; 
-  color: #333;
+.carrossel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.sobre{
+.carrossel-button.prev {
+  left: 10px;
+}
+
+.carrossel-button.next {
+  right: 10px;
+}
+
+/* Seção Sobre */
+.sobre {
   padding: 15rem 9rem;
 }
 
-.sobre-titulo{
+.sobre-titulo {
   padding: 30px;
   font-size: 3rem;
   font-style: italic;
   color: var(--escuro);
   text-align: center;
-
 }
 
-.sobre-caixa{
+.sobre-caixa {
   padding: 6rem;
   max-width: 950px;
   margin: 0 auto;
@@ -205,51 +214,46 @@ h1{
   border: 1px solid var(--escuro);
   backdrop-filter: blur(10px);
   background: rgba(211, 193, 113, 0.849);
-
 }
 
-.sobre-paragrafo{
+.sobre-paragrafo {
   text-align: center;
   font-style: italic;
   font-size: 1.4rem;
-
 }
 
-.projetos{
-  padding: 6rem, 2rem;
-
+/* Seção Projetos */
+.projetos {
+  padding: 6rem 2rem; /* Preenchimento ajustado */
 }
 
-.projetos-titulo{
+.projetos-titulo {
   text-align: center;
   font-style: italic;
   font-size: 2.5rem;
   margin-bottom: 50px;
-
 }
 
-.projetos-card:hover{
-   box-shadow: 0 10px 20px rgba(143, 117, 3, 0.849);
-   transform: translateY(-10px) scale(1.03);
+.projetos-card:hover {
+  box-shadow: 0 10px 20px rgba(143, 117, 3, 0.849);
+  transform: translateY(-10px) scale(1.03);
 }
 
-
-.projetos-caixas{
+.projetos-caixas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-
 }
 
-.projetos-imagem{
+.projetos-imagem {
   height: 400px;
   width: 100%;
-  object-fit: 1.2rem;
+  object-fit: cover; /* Alterado para 'cover' para melhor dimensionamento da imagem */
 }
 
-.projetos-card{
+.projetos-card {
   background: rgba(211, 193, 113, 0.849);
   border-radius: 16px;
   backdrop-filter: blur(26px);
@@ -258,38 +262,34 @@ h1{
   transition: all 0.5s ease;
 }
 
-.caixa-textos-projetos{
+.caixa-textos-projetos {
   padding: 1.5rem;
-
 }
-.paragrafo-projetos{
+
+.paragrafo-projetos {
   font-style: italic;
   color: rgba(243, 242, 237, 0.849);
   line-height: 1.25rem;
-
 }
 
-.info-projetos{
+.info-projetos {
   font-style: italic;
   margin-bottom: 15px;
-
 }
 
-
-
-.contatos{
+/* Seção de Contato */
+.contatos {
   padding: 15rem 8rem;
-
 }
 
-.contatos-titulo{
+.contatos-titulo {
   text-align: center;
   font-size: 2.5rem;
   font-style: italic;
   margin-bottom: 30px;
 }
 
-.formulario-contato{
+.formulario-contato {
   max-width: 600px;
   margin: 0 auto;
   background: rgba(211, 193, 113, 0.849);
@@ -297,51 +297,49 @@ h1{
   padding: 2rem;
   border: 1px solid var(--vidro);
   border-radius: 16px;
-
 }
 
-
-.campo-form{
+.campo-form {
   width: 100%;
   padding: 1rem;
   font-style: italic;
   background: rgb(229, 230, 228);
   border-radius: 8px;
   color: var(--escuro);
-  border: 1px solid var(--vidro) ;
+  border: 1px solid var(--vidro);
   resize: none;
   outline: none;
-
 }
 
-.campo-form:focus{
+.campo-form:focus {
   border-color: var(--escuro);
-  box-shadow: 0 ;
+  box-shadow: 0 0 0 3px rgba(55, 63, 75, 0.2); /* Adiciona uma sombra sutil no foco */
 }
 
-.grupo-form{
+.grupo-form {
   margin-bottom: 1.5rem;
 }
 
-.botao-form{
+.botao-form {
   font-style: italic;
   color: var(--claro);
-  background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+  background: linear-gradient(45deg, var(--verdeclaro), var(--verdeescuro));
   padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   width: 100%;
-  transition: all 0.5 ease;
+  transition: all 0.5s ease;
 }
 
-.botao-form:hover{
-  transform: translateY(--4px);
-   box-shadow: 0 0 20px rgba(190, 163, 43, 0.849);
+.botao-form:hover {
+  transform: translateY(-4px); /* Corrigido de --4px */
+  box-shadow: 0 0 20px rgba(190, 163, 43, 0.849);
 }
 
-.particulas{
+/* Partículas de Fundo */
+.particulas {
   position: fixed;
   top: 0;
   left: 0;
@@ -349,96 +347,58 @@ h1{
   height: 100%;
   z-index: -1;
   opacity: 0.5;
-  background: 
-  radial-gradient(circle at 10% 20%, var(--escuro) 0%, transparent 20%)
-  radial-gradient(circle at 90% 80%, var(--maisescuro) 0%, transparent 20%)
-  var(--secundaria);
-
+  background:
+    radial-gradient(circle at 10% 20%, var(--secundaria) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    var(--primaria);
 }
 
-@keyframes flutuar{
-  0%, 100%{
+/* Animações */
+@keyframes flutuar {
+  0%,
+  100% {
     transform: translateY(0);
   }
 
-  50%{
+  50% {
     transform: translateY(-20px);
   }
 }
 
-.carrossel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.carrossel-button.prev {
-    left: 10px; /* Posição do botão esquerdo */
-}
-
-.carrossel-button.next {
-    right: 10px; /* Posição do botão direito */
-}
-
-@media (max-width: 768px) {
-    .projetos-card2 {
-        width: 300px;
-        height: 200px;
-    }
-    .carrossel-button {
-        padding: 8px 12px;
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .projetos-card2 {
-        width: 85vw; 
-        margin-right: 15px;
-        height: 180px;
-    }
-    .carrosel-container {
-        width: 100%;
-    }
-    .carrossel-button {
-        padding: 5px 10px;
-        font-size: 18px;
-    }
-}
-
-
-
+/* Rodapé */
 footer {
-    color: #242222; 
-    padding: 1rem; 
-    text-align: center;
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    flex-wrap: wrap;
-    gap: 85px;
-    margin-top: 1.5px;
+  color: #242222;
+  padding: 1.5rem 1rem; /* Preenchimento ajustado para telas menores */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 85px;
+  margin-top: 1.5px;
 }
 
 footer a {
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
-    text-decoration: none;
-    color: #2b2a2a; 
-    transition: transform 0.3s ease; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #2b2a2a;
+  transition: transform 0.3s ease;
 }
 
 footer a:hover {
-    transform: translateY(-5px);
-    color: rgba(190, 163, 43, 0.849);
+  transform: translateY(-5px);
+  color: rgba(190, 163, 43, 0.849);
 }
 
 footer a img {
-    width: 70px;
-    height: 60px;
-    margin-bottom: 9px; 
-    border-radius: 50%; 
-    background-color:rgba(190, 163, 43, 0.849); 
-    padding: 5px; 
+  width: 70px;
+  height: 60px;
+  margin-bottom: 9px;
+  border-radius: 50%;
+  background-color: rgba(190, 163, 43, 0.849);
+  padding: 5px;
 }
 
 footer a p {
@@ -446,14 +406,406 @@ footer a p {
   max-width: 5rem;
   font-size: 1.1rem;
   font-style: italic;
-  margin: 6px; 
+  margin: 6px;
 }
 
+/* --- Media Queries para Responsividade --- */
 
+/* Para telas menores que 1024px (Laptops, Tablets em Paisagem) */
+@media (max-width: 1024px) {
+  .menu {
+    gap: 5rem;
+  }
+
+  .foto-perfil {
+    width: 350px;
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 1.3rem;
+    width: 95%;
+  }
+
+  .sobre {
+    padding: 10rem 5rem;
+  }
+
+  .sobre-caixa {
+    padding: 4rem;
+    border-radius: 60px;
+  }
+
+  .sobre-paragrafo {
+    font-size: 1.2rem;
+  }
+
+  .contatos {
+    padding: 10rem 5rem;
+  }
+}
+
+/* Para telas menores que 768px (Tablets em Retrato, Telefones maiores) */
 @media (max-width: 768px) {
-    footer {
-        flex-direction: column; 
-        gap: 25px; 
-        padding: 20px 15px;
-    }
+  .navegacao {
+    padding: 1rem;
+  }
+
+  .menu {
+    flex-direction: column; /* Empilha os itens do menu */
+    gap: 1.5rem;
+    align-items: center; /* Centraliza os itens empilhados */
+  }
+
+  .foto-perfil {
+    width: 280px;
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 1.1rem;
+    padding: 0 1rem; /* Adiciona preenchimento horizontal */
+  }
+
+  .carrosel-container {
+    width: 90%; /* Mais largo em telas menores */
+    border-radius: 40px;
+  }
+
+  .projetos-card2 {
+    width: 300px;
+    height: 200px;
+    margin-right: 15px; /* Margem reduzida */
+    border-radius: 30px;
+  }
+
+  .project-titulo {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .carrossel-button {
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  .sobre {
+    padding: 8rem 2rem;
+  }
+
+  .sobre-titulo {
+    font-size: 2.5rem;
+  }
+
+  .sobre-caixa {
+    padding: 2.5rem;
+    border-radius: 40px;
+  }
+
+  .sobre-paragrafo {
+    font-size: 1rem;
+  }
+
+  .projetos {
+    padding: 4rem 1rem;
+  }
+
+  .projetos-titulo {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .projetos-caixas {
+    grid-template-columns: 1fr; /* Layout de coluna única para os cartões */
+    gap: 1.5rem;
+    padding: 0 1rem; /* Adiciona preenchimento ao contêiner da grade */
+  }
+
+  .projetos-imagem {
+    height: 250px; /* Altura reduzida para imagens de projetos */
+  }
+
+  .caixa-textos-projetos {
+    padding: 1rem;
+  }
+
+  .paragrafo-projetos {
+    font-size: 0.95rem;
+  }
+
+  .info-projetos {
+    font-size: 1rem;
+  }
+
+  .contatos {
+    padding: 8rem 2rem;
+  }
+
+  .contatos-titulo {
+    font-size: 2rem;
+  }
+
+  .formulario-contato {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .campo-form {
+    padding: 0.8rem;
+  }
+
+  .grupo-form {
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 15px;
+  }
+
+  footer a img {
+    width: 55px;
+    height: 50px;
+  }
+
+  footer a p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Para telas menores que 480px (Maioria dos Telefones em Retrato) */
+@media (max-width: 480px) {
+  .navegacao {
+    padding: 0.8rem;
+  }
+
+  .menu {
+    gap: 1rem;
+  }
+
+  .menu-link {
+    font-size: medium;
+  }
+
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-width: 2px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-top: 15px;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 0.95rem;
+    width: 95%;
+  }
+
+  .carrosel-container {
+    width: 95%; /* Ainda mais largo */
+    border-radius: 30px;
+  }
+
+  .projetos-card2 {
+    width: 85vw; /* Usa largura da viewport para melhor dimensionamento */
+    height: 180px;
+    margin-right: 10px;
+    border-radius: 25px;
+  }
+
+  .project-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .carrossel-button {
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+
+  .sobre {
+    padding: 6rem 1rem;
+  }
+
+  .sobre-titulo {
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  .sobre-caixa {
+    padding: 1.5rem;
+    border-radius: 30px;
+  }
+
+  .sobre-paragrafo {
+    font-size: 0.9rem;
+  }
+
+  .projetos {
+    padding: 3rem 0.5rem;
+  }
+
+  .projetos-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .projetos-caixas {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .projetos-imagem {
+    height: 200px;
+  }
+
+  .caixa-textos-projetos {
+    padding: 0.8rem;
+  }
+
+  .paragrafo-projetos {
+    font-size: 0.85rem;
+  }
+
+  .info-projetos {
+    font-size: 0.9rem;
+  }
+
+  .contatos {
+    padding: 6rem 1rem;
+  }
+
+  .contatos-titulo {
+    font-size: 1.8rem;
+  }
+
+  .formulario-contato {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .campo-form {
+    padding: 0.7rem;
+  }
+
+  .botao-form {
+    padding: 0.8rem 1.5rem;
+  }
+
+  footer {
+    gap: 15px;
+    padding: 15px 10px;
+  }
+
+  footer a img {
+    width: 45px;
+    height: 40px;
+  }
+
+  footer a p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Para telas menores que 320px (Telefones muito pequenos) */
+@media (max-width: 320px) {
+  .navegacao {
+    padding: 0.6rem;
+  }
+
+  .menu-link {
+    font-size: small;
+  }
+
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 0.85rem;
+  }
+
+  .projetos-card2 {
+    height: 150px;
+  }
+
+  .project-titulo {
+    font-size: 1.5rem;
+  }
+
+  .carrossel-button {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+
+  .sobre {
+    padding: 4rem 0.5rem;
+  }
+
+  .sobre-titulo {
+    font-size: 1.8rem;
+  }
+
+  .sobre-caixa {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .sobre-paragrafo {
+    font-size: 0.8rem;
+  }
+
+  .projetos-titulo {
+    font-size: 1.5rem;
+  }
+
+  .projetos-imagem {
+    height: 150px;
+  }
+
+  .paragrafo-projetos {
+    font-size: 0.75rem;
+  }
+
+  .info-projetos {
+    font-size: 0.8rem;
+  }
+
+  .contatos-titulo {
+    font-size: 1.5rem;
+  }
+
+  .campo-form {
+    padding: 0.6rem;
+  }
+
+  .botao-form {
+    padding: 0.7rem 1.2rem;
+  }
+
+  footer a img {
+    width: 35px;
+    height: 30px;
+  }
+
+  footer a p {
+    font-size: 0.7rem;
+  }
 }
