@@ -143,21 +143,22 @@
     </section>
 
     
-   <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em contato</h2>
-        
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-
-            <div class="grupo-form">
-                <input  placeholder="Nome" class="campo-form" id="nome">
-            </div>
-            <div class="grupo-form">
-                <textarea class="campo-form"  placeholder="Digite sua mensagem" rows="9" id="mensagem"></textarea>
-            </div>
-
-            <button type="submit" class="botao-form">Enviar Whatsap</button>
-        </form>
-    </section>
+  <section id= "contatos"class="contatos">
+    <h2 class="contatos-titulo">Entre em Contato</h2>
+    <form class="formulario-contato" onsubmit="enviarWhats(event)">
+        <div class="grupo-form">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" class="campo-form" placeholder="Digite seu nome" required>
+        </div>
+        <div class="grupo-form">
+            <label for="mensagem">Sua Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" class="campo-form" rows="5" placeholder="Sua mensagem para Juliana..." required></textarea>
+        </div>
+        <button type="submit" class="botao-form">
+            Enviar Mensagem via WhatsApp
+        </button>
+    </form>
+</section>
 
     <footer>
         <a href="https://www.instagram.com/julianasterapeuta/" target="_blank" rel="noopener noreferrer">
