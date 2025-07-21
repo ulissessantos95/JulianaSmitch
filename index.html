@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra Juliana</title>
+    <title>Juliana Schmidt</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,7 +39,7 @@
         <div>
             <img src="Img/Logoperfil.png" alt="Foto de perfil da Dra Juliana" class="foto-perfil">
             
-            <h1>Julia Smitch</h1>
+            <h1>Juliana Schmidt</h1>
             <p class="cabecalho-sub-titulo">   Na Clínica Multidisciplinar Especializada, me dedico à Assistência Terapêutica com foco no Transtorno do Espectro Autista, utilizando abordagens inovadoras da ciência ABA. Minha trajetória acadêmica no Centro Universitário UniFatecie, cursando Terapia Ocupacional, 
                 complementa minha expertise e reflete meu compromisso com a excelência no atendimento aos pacientes.
                 Paralelamen e à minha carreira clínica, atuo como modelo, onde minha experiência internacional enriquece minha atuação profissional. 
@@ -146,17 +146,15 @@
    <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em contato</h2>
         
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+        <form onsubmit="enviarWhats(event)">
+    <label for="nome">Seu Nome:</label><br>
+    <input type="text" id="nome" name="nome" value="Nome Teste"><br><br>
 
-            <div class="grupo-form">
-                <input  placeholder="Nome" class="campo-form" id="nome">
-            </div>
-            <div class="grupo-form">
-                <textarea class="campo-form"  placeholder="Digite sua mensagem" rows="9" id="mensagem"></textarea>
-            </div>
+    <label for="mensagem">Sua Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50">Olá, gostaria de saber mais!</textarea><br><br>
 
-            <button type="submit" class="botao-form">Enviar Whatsap</button>
-        </form>
+    <button type="submit">Enviar WhatsApp</button>
+</form>
     </section>
 
     <footer>
