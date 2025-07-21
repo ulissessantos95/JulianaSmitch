@@ -76,7 +76,7 @@ body {
   flex-direction: column; /* Permite que o conteúdo se empilhe */
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem; /* Adiciona um pouco de preenchimento */
+  padding: 18rem 1rem; /* Adiciona um pouco de preenchimento */
 }
 
 .foto-perfil {
@@ -199,7 +199,7 @@ h1 {
 }
 
 .sobre-titulo {
-  padding: 30px;
+  padding: 100px;
   font-size: 3rem;
   font-style: italic;
   color: var(--escuro);
@@ -230,6 +230,7 @@ h1 {
 .projetos-titulo {
   text-align: center;
   font-style: italic;
+  padding: 150px;
   font-size: 2.5rem;
   margin-bottom: 50px;
 }
@@ -248,7 +249,7 @@ h1 {
 }
 
 .projetos-imagem {
-  height: 400px;
+  height: 500px;
   width: 100%;
   object-fit: cover; /* Alterado para 'cover' para melhor dimensionamento da imagem */
 }
@@ -286,7 +287,7 @@ h1 {
   text-align: center;
   font-size: 2.5rem;
   font-style: italic;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .formulario-contato {
@@ -531,11 +532,11 @@ footer a p {
   }
 
   .projetos-imagem {
-    height: 250px; /* Altura reduzida para imagens de projetos */
+    height: 650px; /* Altura reduzida para imagens de projetos */
   }
 
   .caixa-textos-projetos {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .paragrafo-projetos {
@@ -568,7 +569,6 @@ footer a p {
   }
 
   footer {
-    flex-direction: column;
     gap: 25px;
     padding: 20px 15px;
   }
