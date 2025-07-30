@@ -1,20 +1,22 @@
-
 const telefone = '5548992257674';
 
 function enviarWhats(event) {
-    event.preventDefault();
+    // Evitar comportamento de envio de formulário padrão
+    event.preventDefault(); 
 
+    // Obtenha os valores atuais dos campos de entrada dentro da função
     const nome = document.getElementById('nome').value;
     const mensagem = document.getElementById('mensagem').value;
 
-    const texto = `Olá! Juliana, me chamo ${nome}, ${mensagem}`;
+    const texto = `Olá! Juliana me chamo ${nome}, ${mensagem}`;
     const msgnFormatada = encodeURIComponent(texto);
 
     const url = `https://wa.me/${telefone}?text=${msgnFormatada}`;
 
-    window.location.href = url; // melhor para celular
-}
+    console.log(url);
 
+    window.open(url, '_blank');
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     // Seleciona o contêiner que contém todas as imagens e que será rolado
