@@ -7,7 +7,6 @@ function enviarWhats(event) {
     // Obtenha os valores atuais dos campos de entrada dentro da função
     const nome = document.getElementById('nome').value;
     const mensagem = document.getElementById('mensagem').value;
-
     const texto = `Olá! Juliana me chamo ${nome}, ${mensagem}`;
     const msgnFormatada = encodeURIComponent(texto);
 
