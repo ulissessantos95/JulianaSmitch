@@ -1,4 +1,4 @@
-const telefone = '5548992257674';
+const telefone = '5548999725267';
 
 function enviarWhats(event) {
     // Evitar comportamento de envio de formulário padrão
