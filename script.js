@@ -17,6 +17,8 @@ function enviarWhats(event) {
     window.open(url, '_blank');
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Seleciona o contêiner que contém todas as imagens e que será rolado
     const projetosCorrosel = document.querySelector('.projetos-corrosel');
